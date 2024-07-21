@@ -29,5 +29,16 @@
         PushAlertCo.forceSubscribe(); //This will bring up the subscription opt-in, if it is not blocked. If blocked, it will show steps to unblock notifications.
       }
     </script>
+
+    <script>
+      // register ServiceWorker, remember to use absolute path!
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("/WebPushTestPage/sw.js", {
+          scope: "/WebPushTestPage/",
+        });
+      }
+
+      // --- Application code here ---
+    </script>
   </body>
 </html>
