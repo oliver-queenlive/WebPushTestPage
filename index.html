@@ -18,5 +18,16 @@
   </head>
   <body>
     Web Push test
+
+    <button onclick="PushAlertCo.forceSubscribe()">Subscribe</button>
+    <button onclick="PushAlertCo.forceSubscribe()">Unblock</button>
+
+    <script>
+      (pushalertbyiw = window.pushalertbyiw || []).push(["onReady", onPAReady]);
+
+      function onPAReady() {
+        PushAlertCo.forceSubscribe(); //This will bring up the subscription opt-in, if it is not blocked. If blocked, it will show steps to unblock notifications.
+      }
+    </script>
   </body>
 </html>
